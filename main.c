@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
-//Ýkinci ogretimlerin birinci ogretimlerden sonraki kayit siralarini bulmak icin bu fonksiyonu kullanýyoruz
+//Ä°kinci ogretimlerin birinci ogretimlerden sonraki kayit siralarini bulmak icin bu fonksiyonu kullanÄ±yoruz
 void kayit_yenile(char isim[1000][15],char soyisim[1000][15],char numara[1000][10],char kayit_sirasi[1000][5],char ogretim_turu[1000][5],int boyut,int ayni[4])
 {
     int i,sayac=1,j,x=ayni[2];
@@ -44,7 +44,7 @@ void kayit_yenile(char isim[1000][15],char soyisim[1000][15],char numara[1000][1
     }
 }
 
-//Ayni isimden öðrenci varsa fazla olanlarin bilgilerine X atiyoruz
+//Ayni isimden Ã¶ÄŸrenci varsa fazla olanlarin bilgilerine X atiyoruz
 void silme_islemi(char isim[1000][15],char soyisim[1000][15],char kayit_sirasi[1000][5],char ogretim_turu[1000][5],char numara[1000][10],int boyut,int ayni[4])
 {
     int i,j;
@@ -79,7 +79,7 @@ void kayit_guncelleme(char isim[1000][15],char soyisim[1000][15],char kayit_sira
             itoa(numara1[i]%1000,&kayit_sirasi[i],10);
         }
     }
-    for(i=0; i<boyut; i++)//Ayni kayittan olduðu için silinen yani ismine X atilan kayit kaydýrýlarak üstüne siradaki kayit yerleþiyor
+    for(i=0; i<boyut; i++)//Ayni kayittan olduÄŸu iÃ§in silinen yani ismine X atilan kayit kaydÄ±rÄ±larak Ã¼stÃ¼ne siradaki kayit yerleÅŸiyor
     {
         if(strcmp(isim[i],"X")==0)
         {
@@ -222,7 +222,7 @@ void numara_siralama(char isim[1000][15],char soyisim[1000][15],char kayit_siras
         }
     }
 }
-//Dolu birinci ve ikinci ogretim siniflarina göre sýnýf dosyasý oluþturuyoruz
+//Dolu birinci ve ikinci ogretim siniflarina gÃ¶re sÄ±nÄ±f dosyasÄ± oluÅŸturuyoruz
 void azsinif_dosyaya_yazdir(int birinci_ogr,int ikinci_ogr,int kapasite2[7],char isim[1000][15],char soyisim[1000][15],char kayit_sirasi[1000][5],char ogretim_turu[1000][5],char numara[1000][10],int boyut)
 {
     char gecici[5][10];
@@ -327,7 +327,7 @@ int main()
 
     int birinci_ogretim=0,ikinci_ogretim=0;
     int kontrol1[boyut];
-    //Kac tane birinci ve ikinci oðretim oðrencisi var onu buluyoruz
+    //Kac tane birinci ve ikinci oÄŸretim oÄŸrencisi var onu buluyoruz
     for(i=0; i<boyut-ayni[1]-ayni[2]; i++)
     {
         kontrol1[i]=(atoi(numara[i])/1000)%10;
